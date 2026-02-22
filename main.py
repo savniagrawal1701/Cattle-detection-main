@@ -9,7 +9,7 @@ from flask import Flask, request, render_template, send_file
 app = Flask(__name__)
 
 # Load Model (Optimized for Render's low RAM)
-model = torch.hub.load("ultralytics/yolov5", "custom", path="weights/yolov5s.pt", force_reload=False)
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='weights/yolov5s.pt', source='local', force_reload=True)
 model.conf = 0.4
 
 @app.route('/')
@@ -49,3 +49,4 @@ if __name__ == "__main__":
     # Render provides a PORT environment variable
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
+
