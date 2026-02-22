@@ -1,9 +1,9 @@
-pillow
-requests
-pandas
-opencv-python
-numpy
+flask
 torch
-tkinter
-random
-mathplotlib
+torchvision
+torchaudio --index-url https://download.pytorch.org/whl/cpu
+opencv-python-headless
+pandas
+requests
+Pillow
+gunicorn
